@@ -43,4 +43,16 @@ public class SimpleRowKeyGenerator {
   public static byte[] getNanoTimestampKey(String prefix) throws UnsupportedEncodingException {
     return (prefix + String.valueOf(System.nanoTime())).getBytes("UTF8");
   }
+
+  /**
+   * 自定义RowKey
+   * @param userid
+   * @param datetime
+   * @return
+   * @throws UnsupportedEncodingException
+   */
+  public static byte[] getDjtRowKey(String userid, String datetime) throws UnsupportedEncodingException {
+    return (userid + datetime + String.valueOf(System.currentTimeMillis())).getBytes("UTF8");
+  }
+
 }

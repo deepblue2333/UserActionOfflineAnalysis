@@ -23,11 +23,24 @@
 
   <properties>
     <!-- TODO fix spotbugs violations -->
+    <hbase2.version>2.1.4</hbase2.version>
     <spotbugs.maxAllowedViolations>3</spotbugs.maxAllowedViolations>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.apache.flume.flume-ng-sinks</groupId>
+        <artifactId>flume-ng-hbase2-sink</artifactId>
+        <version>1.9.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.hbase</groupId>
+        <artifactId>hbase-client</artifactId>
+        <version>2.1.4</version>
+      </dependency>
+
       <!-- HBase2 dependencies -->
       <dependency>
         <groupId>org.apache.hbase</groupId>
